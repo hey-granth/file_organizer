@@ -3,7 +3,7 @@ import shutil
 
 
 def get_source_path():
-    return os.path.join(os.path.expanduser('~'), 'Downloads')
+    return os.path.join(os.path.expanduser("~"), "Downloads")
 
 
 def file_type(file):
@@ -12,39 +12,38 @@ def file_type(file):
     print(f"Extension: {extension}")
 
     filetypes = {
-        '.pdf': 'PDFs',
-        '.doc': 'Word',
-        '.docx': 'Word',
-        '.ppt': 'PowerPoints',
-        '.pptx': 'PowerPoints',
-        '.xls': 'Excel',
-        '.xlsx': 'Excel',
-        '.png': 'Images',
-        '.jpg': 'Images',
-        '.jpeg': 'Images',
-        '.hiec': 'Images',
-        '.gif': 'Images',
-        '.mp4': 'Videos',
-        '.mov': 'Videos',
-        '.avi': 'Videos',
-        '.mkv': 'Videos',
-        '.txt': 'Text',
-        '.csv': 'Text',
-        '.json': 'Text',
-        '.xml': 'Text',
-        '.mp3': 'Audio',
-        '.wav': 'Audio',
-        '.zip': 'Zip',
-        '.rar': 'Zip',
-        '.tar': 'Zip',
-        '.exe': 'Executables',
-        '.apk': 'Executables',
-        '.deb': 'Executables',
-        '.py': 'Python Scripts',
-
+        ".pdf": "PDFs",
+        ".doc": "Word",
+        ".docx": "Word",
+        ".ppt": "PowerPoints",
+        ".pptx": "PowerPoints",
+        ".xls": "Excel",
+        ".xlsx": "Excel",
+        ".png": "Images",
+        ".jpg": "Images",
+        ".jpeg": "Images",
+        ".hiec": "Images",
+        ".gif": "Images",
+        ".mp4": "Videos",
+        ".mov": "Videos",
+        ".avi": "Videos",
+        ".mkv": "Videos",
+        ".txt": "Text",
+        ".csv": "Text",
+        ".json": "Text",
+        ".xml": "Text",
+        ".mp3": "Audio",
+        ".wav": "Audio",
+        ".zip": "Zip",
+        ".rar": "Zip",
+        ".tar": "Zip",
+        ".exe": "Executables",
+        ".apk": "Executables",
+        ".deb": "Executables",
+        ".py": "Python Scripts",
     }
 
-    folder = filetypes.get(extension, 'Misc')
+    folder = filetypes.get(extension, "Misc")
     print(f"Folder: {folder}")
     return folder
 
@@ -52,7 +51,7 @@ def file_type(file):
 def move_file(source, destination):
     try:
         shutil.move(source, destination)
-        print(f'Moved {source} to {destination} Successfully')
+        print(f"Moved {source} to {destination} Successfully")
     except Exception as e:
         print(e)
 
@@ -69,8 +68,8 @@ def main():
                 os.mkdir(destination)
             move_file(source, os.path.join(destination, filename))
 
-    print('Files Organized Successfully!')
+    print("Files Organized Successfully!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
